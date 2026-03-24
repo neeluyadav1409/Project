@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% load static %}
+<img src="{% static 'my_app/example.jpg' %}" alt="My image">
+{% block title %}{{titleName}}{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'static/css/index.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+<div class="container-fluid px-0">
+    <video src="{% static 'img/logo.mp4' %}"  class="d-block w-100 h-100" autoplay loop muted>
+</div>
+
+<!-- adding intro section  -->
+<section class="intro-section">
+
+    <!-- Left Figure / GIF -->
+
+    <div class="intro-image">
+        <img src="{% static 'img/mode12.png'%}" alt="Jewellery Animation" >
+    </div>
+
+    <!-- Right Text -->
+
+    <div class="intro-text">
+
+        <h2>Welcome to Soni Jewellers</h2>
+
+        <p>
+            At <strong>Soni Jewellers</strong>, we believe jewellery is more than just an accessory — it is a symbol of
+            love, tradition, and timeless beauty. Our collection is crafted with precision and passion to celebrate the
+            most precious moments of your life.
+        </p>
+
+        <p>
+            From elegant gold necklaces to sparkling diamond rings and beautiful bridal sets, every piece in our
+            collection reflects premium craftsmanship and classic design. We are proud to offer jewellery that blends
+            tradition with modern elegance.
+        </p>
+
+        <a href="#" class="intro-btn">Explore Collection</a>
+
+    </div>
+
+</section>
+
+<!-- adding cards -->
+
+<h3 class="text-center my-3"><i>Featured Collections</i></h3>
+<div class="category-grid">
+
+    <!-- Item 1 -->
+
+    <div class="category-item">
+        <div class="circle">
+            <img src="{% static 'img/rings.avif' %}" alt="">
+        </div>
+        <div class="category-text">
+            <h3>Elegant Rings</h3>
+            <p>Discover beautifully crafted gold and diamond rings designed for elegance and everyday style.</p>
+        </div>
+    </div>
+
+    <!-- Item 2 -->
+
+    <div class="category-item">
+        <div class="circle">
+            <img src="{% static 'img/partnerimages_2F85e30a01_33027736_1.webp' %}" alt="">
+        </div>
+        <div class="category-text">
+            <h3>Designer Earrings</h3>
+            <p>Explore our stunning collection of traditional and modern earrings for every occasion.</p>
+        </div>
+    </div>
+
+    <!-- Item 3 -->
+
+    <div class="category-item">
+        <div class="circle">
+            <img src="{% static 'img/necklace.png' %}" alt="">
+        </div>
+        <div class="category-text">
+            <h3>Luxury Necklaces</h3>
+            <p>Elegant necklaces crafted with perfection to enhance your beauty and style.</p>
+        </div>
+    </div>
+
+    <!-- Item 4 -->
+
+    <div class="category-item">
+        <div class="circle">
+            <img src="{% static 'img/bangles2.jpg' %}" alt="">
+        </div>
+        <div class="category-text">
+            <h3>Golden Bangles</h3>
+            <p>Traditional and modern bangles that add grace and charm to every celebration.</p>
+        </div>
+    </div>
+
+    <!-- Item 5 -->
+
+    <div class="category-item">
+        <div class="circle">
+            <img src="{% static 'img/pannarings1.webp' %}" alt="">
+        </div>
+        <div class="category-text">
+            <h3>Stone Rings</h3>
+            <p>Symbol of Spiritualism and tradition crafted with premium gold and beautiful designs.</p>
+        </div>
+    </div>
+
+    <!-- Item 6 -->
+
+    <div class="category-item">
+        <div class="circle">
+            <img src="{% static 'img/anklet1.webp' %}" alt="">
+        </div>
+        <div class="category-text">
+            <h3>Anklet Collection</h3>
+            <p>Exquisite Anklets sets designed to make your special day unforgettable.</p>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<div class="container dabba">
+    <img src="{% static 'img/NewMarch26-1.jfif' %}" alt="">
+</div>
+
+<section class="branches">
+
+<h2 class="branch-title">Our Branches</h2>
+
+<div class="branch-container">
+
+<div class="branch-card">
+<div class="branch-circle">
+<img src="{% static 'img/lucknow.cms' %}" alt="Lucknow">
+</div>
+<p>Lucknow</p>
+</div>
+
+<div class="branch-card">
+<div class="branch-circle">
+<img src="{% static 'img/agra.jpg' %}" alt="Agra">
+</div>
+<p>Agra</p>
+</div>
+
+<div class="branch-card">
+<div class="branch-circle">
+<img src="{% static 'img/jaipur.jfif' %}" alt="Jaipur">
+</div>
+<p>Jaipur</p>
+</div>
+
+<div class="branch-card">
+<div class="branch-circle">
+<img src="{% static 'img/delhi.webp' %}" alt="Delhi">
+</div>
+<p>Delhi</p>
+</div>
+
+
+
+<div class="branch-card">
+<div class="branch-circle">
+<img src="{% static 'img/varanasi.jpg' %}" alt="Varanasi">
+</div>
+<p>Varanasi</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+{% endblock body %}
+
+

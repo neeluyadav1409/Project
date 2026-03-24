@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+<img src="{% static 'my_app/example.jpg' %}" alt="My image">
+
+{% block title %}About{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="../static/css/about.css">
+{% endblock css %}
+{% block body %}
+   
+<!-- adding poster  -->
+ <section class="about-poster">
+
+<div class="poster-content">
+
+<h1>About Soni Jewellers</h1>
+
+<p>
+At Soni Jewellers, we believe jewellery is more than an ornament — it is a symbol of love, tradition, and timeless beauty. Our collection is crafted with precision and passion, bringing together elegant designs and premium quality to celebrate life’s most precious moments.
+</p>
+
+</div>
+
+</section>
+
+<section class="our-story">
+
+<div class="story-container">
+
+<div class="story-image">
+<img src="../static/img/story.png" alt="Soni Jewellers">
+</div>
+
+<div class="story-text">
+<h2>Our Story</h2>
+
+<p>
+At <b>Soni Jewellers</b>, every piece of jewellery carries a story of elegance, tradition, and trust. 
+Our journey began with a passion to craft timeless jewellery that celebrates the beauty of every special moment.
+</p>
+
+<p>
+From graceful gold necklaces to sparkling diamond rings, each design reflects 
+our dedication to craftsmanship and attention to detail. We blend tradition with modern style to create jewellery that lasts for generations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="why-choose">
+
+<h2 class="section-title">Why Choose Soni Jewellers</h2>
+
+<div class="choose-container">
+
+<div class="choose-card">
+<div class="icon">💎</div>
+<h3>Certified Purity</h3>
+<p>All our jewellery is hallmarked and certified to ensure the highest quality and authenticity.</p>
+</div>
+
+<div class="choose-card">
+<div class="icon">✨</div>
+<h3>Premium Craftsmanship</h3>
+<p>Every piece is carefully crafted by skilled artisans with exceptional attention to detail.</p>
+</div>
+
+<div class="choose-card">
+<div class="icon">👑</div>
+<h3>Elegant Designs</h3>
+<p>Our collection blends traditional artistry with modern luxury designs.</p>
+</div>
+
+<div class="choose-card">
+<div class="icon">🤝</div>
+<h3>Customer Trust</h3>
+<p>We believe in building lasting relationships with customers through honesty and service.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="quote-section">
+
+<div class="quote-container">
+
+<span class="quote-mark">❝</span>
+
+<p class="quote-text">
+Jewellery is not just an ornament, it is a reflection of beauty,
+tradition, and the moments we cherish forever.
+</p>
+
+<h3 class="quote-author">— Soni Jewellers</h3>
+
+</div>
+
+</section>
+
+
+{% endblock body %}

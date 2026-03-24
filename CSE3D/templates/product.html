@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+<img src="{% static 'my_app/example.jpg' %}" alt="My image">
+{% block title %}{{name}} Jwellery {% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/product.css">
+{% endblock css %}
+
+{% block body %}
+<section class="collection-banner">
+
+<div class="collection-content">
+<h1>Our Collection</h1>
+<p>Discover timeless jewellery crafted with elegance</p>
+</div>
+
+</section>
+
+<section class="category-filter">
+
+<h2 class="filter-title">Browse By Category</h2>
+
+<div class="filter-buttons">
+
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="rings">Rings</button>
+<button class="filter-btn" data-filter="necklaces">Necklaces</button>
+<button class="filter-btn" data-filter="earrings">Earrings</button>
+<button class="filter-btn" data-filter="bangles">Bangles</button>
+<button class="filter-btn" data-filter="bridal">Bridal</button>
+
+</div>
+
+</section>
+
+<section class="product-section">
+
+<h2 class="product-title">Our Jewellery</h2>
+
+<div class="product-grid">
+
+<!-- Product 1 -->
+
+<div class="product-card" data-category="rings">
+<div class="product-image">
+<img src="../static/img/ring1.png" alt="Gold Ring">
+</div>
+
+<div class="product-info">
+<h3>Diamond Gold Ring</h3>
+<p class="price">₹32,000</p>
+<button>View Details</button>
+</div>
+</div>
+
+<!-- Product 2 -->
+
+<div class="product-card" data-category="necklaces">
+<div class="product-image">
+<img src="../static/img/necklace.png" alt="Necklace">
+</div>
+
+<div class="product-info" data-category="necklaces">
+<h3>Royal Necklace</h3>
+<p class="price">₹78,000</p>
+<button>View Details</button>
+</div>
+</div>
+
+<!-- Product 3 -->
+
+<div class="product-card" data-category="earrings">
+<div class="product-image">
+<img src="../static/img/Elegant-Stones-Design-Earrings-2.jpg" alt="Earrings">
+</div>
+
+<div class="product-info">
+<h3>Elegant Earrings</h3>
+<p class="price">₹18,500</p>
+<button>View Details</button>
+</div>
+</div>
+
+<!-- Product 4 -->
+
+<div class="product-card" data-category="bangles">
+<div class="product-image">
+<img src="../static/img/bangles1.jpg" alt="Bangle">
+</div>
+
+<div class="product-info">
+<h3>Golden Bangles</h3>
+<p class="price">₹54,000</p>
+<button>View Details</button>
+</div>
+</div>
+
+<!-- Product 5 -->
+
+<div class="product-card" data-category="mangalsutra">
+<div class="product-image">
+<img src="../static/img/chokar1.jpg" alt="Mangalsutra">
+</div>
+
+<div class="product-info">
+<h3>Classic Mangalsutra</h3>
+<p class="price">₹29,000</p>
+<button>View Details</button>
+</div>
+</div>
+
+<!-- Product 6 -->
+
+<div class="product-card" data-category="bridal">
+<div class="product-image">
+<img src="../static/img/chokar3.webp" alt="Bridal Set">
+</div>
+
+<div class="product-info">
+<h3>Bridal Jewellery Set</h3>
+<p class="price">₹1,20,000</p>
+<button>View Details</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+const buttons = document.querySelectorAll(".filter-btn");
+const products = document.querySelectorAll(".product-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // active button style
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    products.forEach(product => {
+      if(filter === "all" || product.dataset.category === filter){
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
+{% endblock body %}

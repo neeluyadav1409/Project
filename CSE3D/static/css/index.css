@@ -1,0 +1,218 @@
+img video{
+    object-fit : cover;
+}
+h3{
+    font-family: Iosevka Charon Mono;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px;
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+/* Circle Image */
+
+.circle{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:auto;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Text below image */
+
+.category-text{
+    margin-top:15px;
+}
+
+.category-text h3{
+    margin:10px 0 5px 0;
+    font-size:20px;
+}
+
+.category-text p{
+    font-size:14px;
+    color:#555;
+    padding:0 10px;
+}
+
+/* Responsive for tablets */
+
+@media (max-width:900px){
+
+.category-grid{
+    grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+/* Responsive for mobile */
+
+@media (max-width:500px){
+
+.category-grid{
+    grid-template-columns: 1fr;
+}
+
+}
+
+.dabba{
+    /* border : 1px solid black; */
+    height:36vh;
+
+}
+
+.dabba img{
+    height:100%;
+    width:100%;
+    /* object-fit:cover; */
+}
+
+/* Main Section */
+
+.intro-section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    padding:70px 10%;
+    background:white;
+}
+
+/* Left Image */
+
+.intro-image img{
+    border-radius:50% 50% 0% 0%;
+    width:350px;
+    max-width:100%;
+}
+
+/* Right Text */
+
+.intro-text{
+    max-width:550px;
+}
+
+.intro-text h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color:#b8860b;   /* golden tone */
+}
+
+.intro-text p{
+    font-size:16px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* Button */
+
+.intro-btn{
+    display:inline-block;
+    padding:12px 24px;
+    background:#b8860b;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:10px;
+}
+
+/* Hover */
+
+.intro-btn:hover{
+    background:#a17408;
+}
+
+/* Responsive */
+
+@media (max-width:900px){
+
+.intro-section{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+.branches{
+padding:90px 10%;
+/* background:#faf7f2; */
+text-align:center;
+}
+
+.branch-title{
+font-size:36px;
+color:#d4af37;
+margin-bottom:50px;
+font-family:"Playfair Display", serif;
+}
+
+/* container */
+
+.branch-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:35px;
+max-width:1100px;
+margin:auto;
+}
+
+/* card */
+
+.branch-card{
+text-align:center;
+transition:0.3s;
+}
+
+/* circle */
+
+.branch-circle{
+width:170px;
+height:170px;
+margin:auto;
+border-radius:50%;
+overflow:hidden;
+border:5px solid #d4af37;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.branch-circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* caption */
+
+.branch-card p{
+margin-top:12px;
+font-size:18px;
+font-weight:500;
+color:#444;
+}
+
+/* hover effect */
+
+.branch-card:hover .branch-circle{
+transform:scale(1.08);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+border-color:#c39a2e;
+}
+
+.branch-card:hover p{
+color:#d4af37;
+}

@@ -1,0 +1,248 @@
+.about-poster{
+position:relative;
+height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+/* Background Image */
+
+.about-poster::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:url("../img/Gemini_Generated_Image_x12z71x12z71x12z.png");
+background-size:cover;
+background-position:center;
+filter:blur(6px);
+transform:scale(1.1);
+z-index:1;
+}
+
+/* Dark overlay */
+
+.about-poster::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+z-index:2;
+}
+
+/* Text Content */
+
+.poster-content{
+position:relative;
+z-index:3;
+max-width:700px;
+padding:20px;
+}
+
+.poster-content h1{
+font-size:48px;
+margin-bottom:15px;
+color:#d4af37;
+}
+
+.poster-content p{
+font-size:18px;
+line-height:1.6;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.poster-content h1{
+font-size:34px;
+}
+
+.poster-content p{
+font-size:16px;
+}
+}
+
+/* OUR STORY */
+
+.our-story{
+padding:80px 10%;
+background:#faf7f2;
+}
+
+.story-container{
+display:flex;
+align-items:center;
+gap:60px;
+max-width:1100px;
+margin:auto;
+}
+
+.story-image img{
+width:300px;
+height:300px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+border:6px solid #d4af37;
+}
+
+.story-text h2{
+font-size:36px;
+margin-bottom:15px;
+color:#d4af37;
+}
+
+.story-text p{
+line-height:1.7;
+color:#444;
+margin-bottom:12px;
+font-size:16px;
+}
+
+
+
+/* WHY CHOOSE US */
+
+.why-choose{
+padding:80px 10%;
+background:white;
+text-align:center;
+}
+
+.section-title{
+font-size:36px;
+color:#d4af37;
+margin-bottom:50px;
+}
+
+.choose-container{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.choose-card{
+background:#fff;
+padding:35px 25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:all 0.3s ease;
+}
+
+.choose-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.choose-card h3{
+margin-bottom:10px;
+color:#333;
+}
+
+.choose-card p{
+font-size:14px;
+color:#555;
+line-height:1.6;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.story-container{
+flex-direction:column;
+text-align:center;
+}
+
+.choose-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.choose-container{
+grid-template-columns:1fr;
+}
+}
+
+.quote-section{
+padding:90px 10%;
+background:linear-gradient(135deg,#faf7f2,#f3e7d7);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.quote-container{
+max-width:750px;
+position:relative;
+}
+
+.quote-mark{
+font-size:70px;
+color:#d4af37;
+display:block;
+margin-bottom:10px;
+}
+
+.quote-text{
+font-family:"Playfair Display", serif;
+font-size:26px;
+line-height:1.6;
+color:#444;
+font-style:italic;
+margin-bottom:20px;
+}
+
+.quote-author{
+font-size:18px;
+color:#b8962e;
+letter-spacing:1px;
+}
+
+/* subtle decorative line */
+
+.quote-author::before{
+content:"";
+display:block;
+width:60px;
+height:2px;
+background:#d4af37;
+margin:15px auto;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.quote-text{
+font-size:20px;
+}
+
+.quote-mark{
+font-size:50px;
+}
+
+}
+
